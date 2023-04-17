@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/beans/spring-context.xsd">
+<bean id="question" class="Com.SpringDemo5.Question">
+<property name="questionId" value="1"></property>
+<property name="questionName" value="What is java"></property>
+<property name="answers">
+<list>
+<value>It is high level</value>
+<value>it is robust</value>
+</list>
+</property>
+</bean>
+<bean id="add" class="Com.SpringDemo5.Address" > 
+<property name="street" value="Gandhi Statue Road"></property>  
+<property name="city" value="Narasaraopet"></property>  
+<property name="state" value="Andhrapradesh"></property>  
+<property name="country" value="India"></property>  
+</bean>  
+<bean id="obj" class="Com.SpringDemo5.Employee1">
+      
+<property name="id">  
+<value>20</value>  
+</property>  
+<property name="name">  
+<value>NagendraBabu</value>  
+</property>  
+<property name="city">  
+<value>Machavaram</value>  
+</property>
+<property name="address" ref="add">
+ </property>  
+  
+</bean>  
+ </beans>
